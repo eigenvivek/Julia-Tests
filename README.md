@@ -1,11 +1,13 @@
 # Julia-Tests
+
 Short scripts for testing different functionalities in Julia.
 
 ## Topics
 
 ### Auto-Differentiability
 
-- Gradient Descent Linear Regression with Zygote ([`linreg_gradient_descent.jl`](linreg_gradient_descent.jl))
+- Linear Regression by gradient descent with Zygote ([`linreg_gradient_descent.jl`](linreg_gradient_descent.jl))
+- Defining a custom gradient rule with ChainRulesCore ([`chainrules_custom_gradient.jl`](chainrules_custom_gradient.jl))
 
 ## Tips
 

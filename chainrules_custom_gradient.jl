@@ -14,7 +14,7 @@ using ChainRulesCore  # If you only want to define rules and use them in Zygote,
 
 function ChainRulesCore.rrule(::typeof(addone), a)  # Define the gradient for addone and its fields with a reverse rule
     y = addone(a)  # Compute the result of addone
-    function addone_pullback(ȳ)  # ȳ is the pullback?
+    function addone_pullback(ȳ)  # ȳ is the cotangent of the primal output ∂a/∂y where a is an argument
         f̄ = NoTangent()  # NoTangent() means that if we purturb the inputs, the function will error. If the function value will not change, use ZeroTangent() instead.
         ā = ones(length(a))  # Derivative of a+1 wrt to a is 1
         return f̄, ā
